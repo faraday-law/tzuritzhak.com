@@ -1,0 +1,15 @@
+{
+    email terminator@protonmail.ch
+}
+
+:80 {
+    redir https://{host}{uri}
+}
+
+# Handle HTTPS requests
+tzuritzhak.com, www.tzuritzhak.com {
+    reverse_proxy http://mkdocs:8000
+    tls {
+        dns cloudflare {env.CLOUDFLARE_API_TOKEN}
+    }
+}
