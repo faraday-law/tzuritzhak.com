@@ -12,4 +12,8 @@ tzuritzhak.com, www.tzuritzhak.com {
     tls {
         dns cloudflare {env.CLOUDFLARE_API_TOKEN}
     }
+    log {
+        output stdout
+        format console
+    }
 }

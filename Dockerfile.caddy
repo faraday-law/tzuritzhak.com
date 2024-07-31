@@ -1,9 +1,11 @@
 FROM caddy:builder AS builder
 
 # Install the Cloudflare DNS module
-RUN xcaddy build --with github.com/caddy-dns/cloudflare
+RUN xcaddy build \
+    --with github.com/caddy-dns/cloudflare \
+    --with github.com/caddyserver/cache-handler
 
-FROM caddy:2.4.6-alpine
+FROM caddy:2.8.4-alpine
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
