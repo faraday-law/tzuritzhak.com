@@ -35,3 +35,8 @@ docker pull ghcr.io/faraday-law/caddy
 docker pull ghcr.io/faraday-law/mkdocs
 docker-compose up -d
 ```
+
+Repo:
+```sh
+https://github.com/faraday-law/tzuritzhak.com
+```
